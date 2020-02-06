@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <title>那是一阵疯（四） - Synn · 半斤紕漏 八兩才情</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Synn">
+<meta name="description" content="我知道这些都是假的，我为何要相信，可最后无论我信不信，我都爱上了她。这就是她厉害的地方。">
+<meta name="keywords" content>
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?20165951">
+
+<link rel="icon" href="/images/fav.ico">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons">
+</noscript>
+</head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer" v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="http://synn.me">
+                首頁
+            </a>
+            <a class="a-block drawer-menu-item false" href="/archives">
+                記事一覽
+            </a>
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/tags/index.html">
+                分門別類
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                關於我
+            </a>
+            
+
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            Synn · 半斤紕漏 八兩才情
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead" v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">Synn · 半斤紕漏 八兩才情</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            Synn' Diary
+        </div>
+        <div class="nav-subtitle">
+            半斤紕漏 / 八兩才情
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            記事一覽
+        </a>
+
+        
+        
+        <a class="a-block nav-link-item false" href="/tags/index.html">
+            分門別類
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            關於我
+        </a>
+        
+
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="http://synn.me">Synn · 半斤紕漏 八兩才情</a><br>
+        
+        冀ICP备15001969号
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper" style="background-image: url('/2008/06/21/novel-wind-4/title.png')">
+                <div class="post-title">
+                    那是一阵疯（四）
+                    <div class="post-meta">
+                        <time datetime="2008-06-21T15:11:05.000Z" itemprop="datePublished">
+                            2008-06-21 23:11
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style>label</i>
+                        
+                        <a href="/tags/小说/">小说</a>, 
+                        
+                        <a href="/tags/那是一阵疯/">那是一阵疯</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>「她在做什么？」我不知道为什么要想起这个，我不想做无意义的事，但这想法是无意义的。也许在有了蚊香之后我能藉着艾草的力量助长我胡思乱想，而我不得不说她很善于演戏、乐于演戏、卖力演戏，这些状语都在试图让人相信她其实很真诚，而后面却跟着一个个不真诚的宾语，所以这些偏正短语我为何要相信，我知道这些都是假的，我为何要相信，可最后无论我信不信，我都爱上了她。</p>
+<p>这就是她厉害的地方。</p>
+<p>于是我只是陪她玩下去这个心照不宣的游戏，我善于游戏、乐于游戏、卖力游戏，我陪她逛街、陪她牵手、陪她拥抱、陪她接吻、陪她过夜，而我不是她的男朋友、连朋友都不是，我只是一个男人，她只是一个女人，只是这样。</p>
+<p>世界没有所谓「肮脏关系」，就连偷情都是干干净净，因为没有人会跟不喜欢的人偷情，如果我们不是用第三者的偏见来看这个世界，世界就会无比干净，因为每份冲动都是干净的，如果这个世界脏了，那是你的眼镜脏了，去擦擦眼镜，再戴上，世界又会无比干净。</p>
+<p>而她现在不在我身边，我又贱贱地想起她，想抱着她睡觉，干干净净的睡觉，绝对不会动手动脚，就算她要求，我也不会动手动脚，她身上的香味已经足够安慰我，其它的一切都是多余，多余的不能再多余，我不会做多余的事，只要怀中有一团香香嫩嫩的肉，我就满足了。</p>
+<p>于是这种想法慢慢变得恐怖，或者血淋淋，因为我不想要女人，只是想要一团没有生命的肉，她甚至不用动，只要让我拥在怀中，陪我过夜，我就满足，这简直不可理喻。我的脑袋很疼，我需要她，现在已经凌晨五点，我却还是无法睡去，没有噪声、没有寒风、没有路灯、没有蚊虫，我却还是无法睡去，我无非需要一个女人，我简直是犯贱。</p>
+<p>我想她想的发疯，就在此时此刻，我多么希望她能敲响我的门，然后我就将她拉进屋内，将她所有的一切都脱光，将自己的一切也同样脱光，然后就一丝不挂的抱着一丝不挂的她睡去，安安稳稳地睡去，我没有心存杂念，我说这么多废话只是因为我睡不着，而我睡不着只是因为我太想她，我简直是犯贱。</p>
+<p>我的生命中有很多个「她」，没有人知道我在想哪个「她」，只有我知道大约七十二小时前我们还紧紧抱在一起，我还能想象出她身上香水的味道，还能隐隐感觉到攥着她手的感觉，这些感觉将在若干小时后消失，在下一次见到她之前再也想象不出感觉不到，也许已经是一次永别，她在我消失的一年中一定会找到一个替代，不见得比我好不见得比我差，但至少是一个男人，可以陪在她身边。一个男人，可以陪在她身边，这就是她选择伴侣的全部标准，我能给她的一切，所有男人都可以给，我在她心中只是一块普普通通的肉，现在我说我有事，不能陪她了，她说你走吧，天下的男人千千万。</p>
+<p>而我现在又想起了她，她不同于任何人，她是我的宝贝，有生命、有灵性、绝无仅有的宝贝。她能猜透我的一切想法，她能不动声色就将我制服，我在她面前永远没有办法。我太过害怕失去她，所以一切都听她的。最后她说，你这样是没用的，我不爱你。我说你走吧，天下……她就走了，这就是女人。</p>
+<p>我在想哪个「她」，我已经无法分辨。</p>
+<p>而我还隐约记得我最在意的一个人，很具体，她最早的出现在我生命之中，我还记得那次，隐约记得，我吻着她，嘴唇、鼻子、额头、耳朵、脸颊、脖子……</p>
+<p>她解开上衣的扣子，我用了三分钟或者三天三夜剥开她的内衣，吻住她的胸。</p>
+<p>窗帘敞开着，我尽力想掩盖自己，我将棉被裹在我俩的身上，而棉被随着抖动一次次掉落，我不得不停下来，对她说，我去把窗帘关上。</p>
+<p>她起身，披起上衣，向房间外走去，</p>
+<p>我关好窗帘去找她，以为她只是想去喝一杯水，</p>
+<p>她坐在沙发上，在系扣子，我走过去，她躲开了。</p>
+<p>「很晚了，你该回家了。」她说，</p>
+<p>我坐在她旁边，揽她过来，她挣脱了，</p>
+<p>「你回家吧。」</p>
+<p>「我不走，我今晚要在这里陪着你。」</p>
+<p>「回家吧，听话。」她重复着，</p>
+<p>「我不走……」下半句被我吞回了肚子里，</p>
+<p>（还没好好的感受，雪花……）</p>
+<p>我恨死了那个此时给我打电话的人，我将电话挂断，抠下电池，扔到地上，</p>
+<p>「有人在找你了，你走吧，」</p>
+<p>「我说过我不会走的，」</p>
+<p>「你走吧，我要洗澡了，」这是最后通牒，</p>
+<p>从九点到九点，我从来没感觉时间过得如此之快。而此时，我们已经在沙发上冷冷的坐了两个小时，她不让我碰她，我却一直在思考着，为什么我不能等太阳落山，为什么我一定要去关窗帘，她什么都不怕，而我在害怕什么？半小时后，在我不能将一场美梦变成强奸的时候我搭上回家的的士，她将我送上的士后默默转身回家，我收到了一封短讯，「你什么时候回来？」</p>
+<p>「一年后。」</p>
+<p>没想到这是我们这辈子最后一次见面，没想到这是我们这辈子最后一次通信。正如我说的，她找到了一个替代，半年后有人告诉我她有男朋友了，在另一个城市。一年后我回到故乡，我没去找她。</p>
+<p>这就是我这辈子最在意的人，是女人。</p>
+
+                </div>
+            </div>
+    
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2017/05/28/c4d-opus-sauvage/">
+        上一篇<br>SAUVAGE 香水建模
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2008/06/19/novel-wind-3/">
+        下一篇<br>那是一阵疯（三）
+    </a>
+    
+</nav>
+
+    
+            
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="http://synn.me">Synn · 半斤紕漏 八兩才情</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js" integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js" integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?22068920"></script>
+
+
+
+</body>
+</html>

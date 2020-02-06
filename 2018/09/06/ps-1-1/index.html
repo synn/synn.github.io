@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <title>PS奇幻漂流I-五彩斑斓的世界(1) - Synn · 半斤紕漏 八兩才情</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Synn">
+<meta name="description" content="电子设备的屏幕是如何显示出五彩斑斓的颜色的？这块看似普通的玻璃下面到底藏着什么黑魔法？">
+<meta name="keywords" content>
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?77829365">
+
+<link rel="icon" href="/images/fav.ico">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons">
+</noscript>
+</head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer" v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="http://synn.me">
+                首頁
+            </a>
+            <a class="a-block drawer-menu-item false" href="/archives">
+                記事一覽
+            </a>
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/tags/index.html">
+                分門別類
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                關於我
+            </a>
+            
+
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            Synn · 半斤紕漏 八兩才情
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead" v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">Synn · 半斤紕漏 八兩才情</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            Synn' Diary
+        </div>
+        <div class="nav-subtitle">
+            半斤紕漏 / 八兩才情
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            記事一覽
+        </a>
+
+        
+        
+        <a class="a-block nav-link-item false" href="/tags/index.html">
+            分門別類
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            關於我
+        </a>
+        
+
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="http://synn.me">Synn · 半斤紕漏 八兩才情</a><br>
+        
+        冀ICP备15001969号
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper" style="background-image: url('/2018/09/06/ps-1-1/title.png')">
+                <div class="post-title">
+                    PS奇幻漂流I-五彩斑斓的世界(1)
+                    <div class="post-meta">
+                        <time datetime="2018-09-06T03:52:02.000Z" itemprop="datePublished">
+                            2018-09-06 11:52
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style>label</i>
+                        
+                        <a href="/tags/Photoshop/">Photoshop</a>, 
+                        
+                        <a href="/tags/色彩模式/">色彩模式</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images0.jpg" alt="images0"></p>
+<p>包括手机、平板电脑的屏幕在内，我们除了睡觉时，可能就连吃饭的时候都在跟它们打交道。但不知你有没有想过，电子设备的屏幕是如何显示出这些五彩斑斓的颜色的？这四四方方的盒子里面到底藏着什么黑魔法？</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images1.jpg" alt="images1"></p>
+<p>1666年，我们所熟知的那位被苹果砸到脑袋的科学巨匠</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images2.jpg" alt="images2"></p>
+<p>在自己实验室内，通过三棱镜折射的原理，将自然光分解成了一条七彩的光带，也就是我们说的赤橙黄绿青蓝紫，彩虹的颜色</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images3.jpg" alt="images3"></p>
+<p>在此之前，科学界的共识是白色的光就是白色的，彩色的光是不知道因为什么原因而变异出来的。</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images4.jpg" alt="images4"></p>
+<p>自从牛顿发现光色散的奥秘之后，就做出了一个大胆假设——既然白色光可以被分成赤橙黄绿青蓝紫这几种颜色，那么这些颜色是不是可以继续分解成其他的颜色呢？</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images5.jpg" alt="images5"></p>
+<p>经过大量的实验和计算后，牛顿得出结论，七色光中红绿蓝三种颜色是不可再分解的。除了红绿蓝三种颜色之外，其他颜色都可以分解成这三种颜色的组合，比如青色就是绿色+蓝色的组合。于是红绿蓝三种颜色被称为</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images6.jpg" alt="images6"></p>
+<p>知道这些有什么用吗？当然，我们今天之所以能在屏幕上看到这些五彩斑斓的图片、视频……全都要归功于牛顿的这项发现！</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images7.jpg" alt="images7"></p>
+<p>我们继续往下说，我们现在知道了红绿蓝是“光学三原色”，所以所有基于这个理论而建立起来的体系，我们称之为</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images8.jpg" alt="images8"></p>
+<p>（RGB即红绿蓝三种颜色的英文首字母）</p>
+<p>当然RGB并不是唯一的色彩模式，不过其他的模式不是我们本章的重点，会在后面的章节中介绍。</p>
+<p>现在我们做一个思考题，假设我们被人击晕后关在一个没有窗户的地下密室内</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images9.jpg" alt="images9"></p>
+<p>当你刚从昏迷中清醒过来，还没来得及环顾房间一周，灯被关掉了。</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images10.jpg" alt="images10"></p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images11.jpg" alt="images11"></p>
+<p>待你慢慢镇定下来之后…… 你开始环顾四周，发现……</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images12.jpg" alt="images12"></p>
+<p>卧槽，刚刚那人是说这屋里有毒气是么！ 卧槽，这TM不是绑架吗！ 卧槽，我要报警！！！ 你开始满怀希望的在自己身上疯狂翻找，希望能找到自己手机，却不期摸出一把</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images13.jpg" alt="images13"></p>
+<p>这里我们的问题就来了，刚刚我们明明看到房间内的墙壁是白色的，为什么我们用手电筒照射墙面却发出红色的光？有人会说这有什么奇怪的？手电筒是红色的，当然打出来的光就是红色的。那么我们思考一个问题，如果墙面是绿色的，我们用红色的手电筒照射上去，会变成什么颜色？随着我们课程的进行，最终你会得到答案，但是答案可能会颠覆你的认知。</p>
+<p>我们先来解答第一个问题，我们前面说过，自然光其实并不是白色的，而是由各种颜色组成的。我们之所以能看到世间万物呈现各种颜色，其实是由于各种物体都有它吸收的波长和反射的波长，比如一个物体是红色的，是因为它将其他波长的光都吸收了，只反射出红光的波长，所以我们的眼睛只能看到红色波长的光，于是它就呈现出红色。</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images14.jpg" alt="images14"></p>
+<p>于是我们现在可以解答问题了，因为白色物体会反射所有波长的光线，所以当我们只照射红光上去，红光就会被反射出来，于是我们就看到了红色。</p>
+<p>好了，我们回到密室</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images15.jpg" alt="images15"></p>
+<p>时间过去一半了！仔细想想刚刚那个死变态说了什么？钥匙就在房间内？然后呢？要在白光下才能看到？难道说手电筒是可以调光的？ 于是你摆弄了半天手中的手电筒，时间又过去了10秒。而结论是狗屁，根本不能调！你只能继续在身上翻找，你猜这次找到了什么？</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images16.jpg" alt="images16"></p>
+<p>你满怀期待的将手电筒打开，惊喜的发现</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images17.jpg" alt="images17"></p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images18.jpg" alt="images18"></p>
+<p>等等，这次我们发现了什么？红色和绿色叠加的地方</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images19.jpg" alt="images19"></p>
+<p>我们刚刚说过，在彩虹的七种颜色中，除了红绿蓝是不可再分的颜色之外，其余的颜色都是可以用红绿蓝三种颜色组合出来的，所以其实黄色就是由红色和绿色叠加而成的。我们平时所看到的交通信号灯，其实并不需要红黄绿三种灯泡，只要放红色和绿色在里面，需要黄色的时候将红和绿一同开启就可以了（当然实际上也有用三色灯泡的，具体情况具体分析）。</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images20.jpg" alt="images20"></p>
+<p>好了，我们只能继续找了，希望在倒计时结束前找到钥匙，不负众望，我们终于找到了……</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images21.jpg" alt="images21"></p>
+<p>没有意外的，这次的手电筒，它是</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images22.jpg" alt="images22"></p>
+<p>蓝色的</p>
+<p>但是呢，我们终于用红楼蓝三种颜色组成了我们需要的白色光！我们拿着三个手电筒在房间里照啊照，终于</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images23.jpg" alt="images23"></p>
+<p>我们看到了一组密码，而时间还剩</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images24.jpg" alt="images24"></p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images25.jpg" alt="images25"></p>
+<p>你疯了一样跑到门口，在键盘上输入密码，门开了，你逃出了密室。</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images26.jpg" alt="images26"></p>
+<p>随着日子一天天过去，你总算走出了被绑架的阴影，但是始终有一个问题一直萦绕在你的心头，让你终日茶不思，饭不想，连觉都睡不好，每天的精神状态也非常萎靡。你找过很多人请教这个问题，但是都无法给你一个满意的答复。 三年后，几经辗转你找到了我，向我问出了那个困扰了你三年的问题：</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images27.jpg" alt="images27"></p>
+<p>我扶了扶眼镜对你说：少年，这个事吧……</p>
+<p><img src="http://img.synn.me/post/ps-1-1-20180906/images/images28.jpg" alt="images28"></p>
+<p><em>欲知后事如何 请听下回分解</em></p>
+
+                </div>
+            </div>
+    
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2019/04/09/c4d-opus-buddha/">
+        上一篇<br>佛 - C4D渲染
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2017/05/28/c4d-opus-sauvage/">
+        下一篇<br>SAUVAGE 香水建模
+    </a>
+    
+</nav>
+
+    
+            
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="http://synn.me">Synn · 半斤紕漏 八兩才情</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js" integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js" integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?20346565"></script>
+
+
+
+</body>
+</html>

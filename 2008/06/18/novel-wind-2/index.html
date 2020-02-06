@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <title>那是一阵疯（二） - Synn · 半斤紕漏 八兩才情</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Synn">
+<meta name="description" content="我们的短见，注定我们不能将这个世界看的一清二楚，我们所触摸不到的一切都只是布景，这布景太大，大的让人心灰意冷。">
+<meta name="keywords" content>
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?6415802">
+
+<link rel="icon" href="/images/fav.ico">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons">
+</noscript>
+</head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer" v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="http://synn.me">
+                首頁
+            </a>
+            <a class="a-block drawer-menu-item false" href="/archives">
+                記事一覽
+            </a>
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/tags/index.html">
+                分門別類
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                關於我
+            </a>
+            
+
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            Synn · 半斤紕漏 八兩才情
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead" v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">Synn · 半斤紕漏 八兩才情</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            Synn' Diary
+        </div>
+        <div class="nav-subtitle">
+            半斤紕漏 / 八兩才情
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            記事一覽
+        </a>
+
+        
+        
+        <a class="a-block nav-link-item false" href="/tags/index.html">
+            分門別類
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            關於我
+        </a>
+        
+
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="http://synn.me">Synn · 半斤紕漏 八兩才情</a><br>
+        
+        冀ICP备15001969号
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper" style="background-image: url('/2008/06/18/novel-wind-2/title.png')">
+                <div class="post-title">
+                    那是一阵疯（二）
+                    <div class="post-meta">
+                        <time datetime="2008-06-18T06:15:34.000Z" itemprop="datePublished">
+                            2008-06-18 14:15
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style>label</i>
+                        
+                        <a href="/tags/小说/">小说</a>, 
+                        
+                        <a href="/tags/那是一阵疯/">那是一阵疯</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>不知道这是第几次坐在这个位置，第几次傻傻的看着窗外流动的风景，那是陌生却再也不能熟悉的风景，河流、村庄、麦田、坟茔，就是这一路寂寞一路荒凉，对面的人睡了，旁边的座位在打牌，身后是哇哇大哭的孩子，这长长的铁轨，它要把我带去何方？</p>
+<p>我从来不确定自己要去的地方是哪里，即便是下了车也从来不确定，这就是车票上写的那个终点吗？为什么一切都是如此陌生而又熟悉，我甚至一度觉得，火车在我的故乡周围绕了几个圈，然后列车员开门说，「嗯，大家醒醒，到站了。」</p>
+<p>我们的短见，注定我们不能将这个世界看的一清二楚，我们所触摸不到的一切都只是布景，这布景太大，大的让人心灰意冷。有时我想，不如将这一切就当真吧，你为了骗我动用了一切，不是么？</p>
+<p>而我终于不能自己，我发疯的要冲破自己世界的边缘，哪怕有个狗洞我都会欣喜若狂的跪着钻过，而终于世界给了我对岸，却不给我摆渡的船，我被困在悬崖的尽头进退不得，生命从来不给我们退路，如今我只能翻身而下。</p>
+<p>我醒了，火车不知到了哪里，还能听到车轮滚动的声音，窗外是一片漆黑，大家全部熟熟睡去，那吵闹的小孩也没了声响，我拿出手机看表，3:21。还有四个小时才到站，我此时觉得又饿又渴，上车前只吃了一顿简单的早餐，已经有近二十个小时米水未进，下了车我还要赶去找住的地方，一个忙碌的上午，也许到了下午才能有时间去吃饭，想到这我的胃又开始紧紧的抽动，抽动，如同受伤的塑胶袋一样抽动，我抱着肚子，咬着牙闭着眼，</p>
+<p>「会好的，」我想，「会好的。」</p>
+<p>就这样想着，我又静静的睡去，我已经几天没有合眼。</p>
+<p>也许生命就这么下去了吧，我总是疑惑着相信而又坚决的不信。如同现在人们都在沉沉的睡着，没有人知道下一秒火车会不会滑出长长的轨道，只因为铁轨上有一枚毫不起眼的石子，也许几十亿年前这枚石子出现的任务就是为了阻止这辆火车前行，它做到了，但等了几十亿年。</p>
+<p>任何事情到了时间就一定会发生，比如火车到站，即便晚了半个小时，可这半小时对于几十亿年来说简直连毫末都算不上。</p>
+<p>我强行拉着装满行李的旅行箱出站，箱子不重，可我已经筋疲力尽，拉箱子的手已经脱臼一样，只凭顽强的信念紧紧地箍住箱子拉手，我的手已经不属于我，只是还剩一点将断未断的筋骨粘连在酸楚不堪的肩膀。</p>
+<p>（还没好好的感受，雪花……）</p>
+<p>「喂……」我放下箱子，连说一个疑问句的力气都没。</p>
+<p>「到了没？」</p>
+<p>「嗯，到了……好累……」我用自己的最后一点苟延残喘发着声。</p>
+<p>「那赶紧找个地方睡一觉。」</p>
+<p>「睡哪里，大街上么？」</p>
+<p>「没有床么？」</p>
+<p>「我现在连棺材板都没的睡，还床呢。」</p>
+<p>「哦，那你快找个地方住下吧，照顾好自己。」</p>
+<p>「嗯，不说了，我要打车了，」</p>
+<p>「嗯。」</p>
+<p>凌晨七点，我能去哪？</p>
+<p>终于能够坐在靠窗的位置休息一会，我想不出来自己还能去哪，于是只能坐上开往公园的公交，公园是流浪汉们的家，而我此刻正需要一个家。</p>
+<p>叶子是一片死绿，池塘是一汪鬼蓝，我找不到一张可以躺下的长椅。这个时间是赖床的时间，只有那些自知时日无多的人才愿意早早醒来感受每一个清晨天空由黑变白的美丽，其实又有几人的时间是多到用不完呢，我不是这样的人，我自知时日无多但甘愿挥霍着自己业已被浸淫的青春。生命如纸，经不起蹂躏，经不起磨炼，高贵起来可以珍藏千年尤价值连城，下贱起来可以随手就冲进下水道。</p>
+<p>不是每一粒石子都值得珍藏，因为不是每一粒石子都有它背后的故事，亦不是每一个故事都属于你。正如我现在正在摩挲的这颗，它的来历，它的背景，它的历史，一切都变得不重要。它此时此刻出现在这里只是为了让我掌中不至空虚，只是为了三十秒后我会将它丢进池塘，它在那里也许又要等上上万年才能重见天日，而这变得不重要，因为这是它的宿命。</p>
+<p>我又想多了，因为我还空着肚子，落魄的狗也许还是狗，而落魄的人会慢慢变得不像人，困倦与饥饿，实在是两难的问题，我看看身旁的箱子，心思到，「让饥饿见鬼去吧！」。我睡了，睡的很快，而饥饿最终没有去见鬼，十五分钟后，我拉起箱子去找餐馆。</p>
+<p>是，因为有一个胃，我们就要不停做自己不想做的事，因为有一个大脑，我们就总要想不该想的事，我们都是工蚁，为了那只臃肿的蚁后忙忙碌碌着，不然我们为了谁呢？为了我们自己吗？这真是笑话。</p>
+
+                </div>
+            </div>
+    
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2008/06/19/novel-wind-3/">
+        上一篇<br>那是一阵疯（三）
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2008/06/16/novel-wind-1/">
+        下一篇<br>那是一阵疯（一）
+    </a>
+    
+</nav>
+
+    
+            
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="http://synn.me">Synn · 半斤紕漏 八兩才情</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js" integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js" integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?43701115"></script>
+
+
+
+</body>
+</html>

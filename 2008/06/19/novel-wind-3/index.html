@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <title>那是一阵疯（三） - Synn · 半斤紕漏 八兩才情</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Synn">
+<meta name="description" content="也许明早醒来我会被落叶埋葬，如果没有，我会给这扇该死的窗户换上一块真正的玻璃。">
+<meta name="keywords" content>
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?36899080">
+
+<link rel="icon" href="/images/fav.ico">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons">
+</noscript>
+</head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer" v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="http://synn.me">
+                首頁
+            </a>
+            <a class="a-block drawer-menu-item false" href="/archives">
+                記事一覽
+            </a>
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/tags/index.html">
+                分門別類
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                關於我
+            </a>
+            
+
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            Synn · 半斤紕漏 八兩才情
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead" v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">Synn · 半斤紕漏 八兩才情</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            Synn' Diary
+        </div>
+        <div class="nav-subtitle">
+            半斤紕漏 / 八兩才情
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            記事一覽
+        </a>
+
+        
+        
+        <a class="a-block nav-link-item false" href="/tags/index.html">
+            分門別類
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            關於我
+        </a>
+        
+
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="http://synn.me">Synn · 半斤紕漏 八兩才情</a><br>
+        
+        冀ICP备15001969号
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper" style="background-image: url('/2008/06/19/novel-wind-3/title.png')">
+                <div class="post-title">
+                    那是一阵疯（三）
+                    <div class="post-meta">
+                        <time datetime="2008-06-19T12:18:28.000Z" itemprop="datePublished">
+                            2008-06-19 20:18
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style>label</i>
+                        
+                        <a href="/tags/小说/">小说</a>, 
+                        
+                        <a href="/tags/那是一阵疯/">那是一阵疯</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>一顿饱餐之后，我接过账单，二十二元，这就是一次充饥的代价，我的腹中已不再饥饿，而我的囊中距离羞涩又近一步。</p>
+<p>我开始在一座座小区的巷子间穿梭，寻找一根根电线杆上的招租广告，一个个电话打过去，一间间房的查看，问价，比对。</p>
+<p>三小时后，我躺在没有床单的床板上，面朝屋顶，心想我终于找到七个可以安身立命的平方，至少可以不再为没有地方遮风避雨发愁，至少不用像那些天桥下流浪的人时时堤防着城管大队来驱逐追赶，至少在这七平方的笼子里，我是自由的。</p>
+<p>有一句成语，叫做「恍如隔世」，在我醒来的时候落叶厚厚的铺了一地，窗外是灯火通明，这换季的风，让人只想夹紧棉被任其抚弄，我从提箱中拿出棉被，和衣而寐，也许明早醒来我会被落叶埋葬，如果没有，我会给这扇该死的窗户换上一块真正的玻璃。</p>
+<p>电话响了，十点钟。</p>
+<p>「喂？……」</p>
+<p>「忙完了么？」</p>
+<p>「嗯，刚刚躺下。你还不睡么？」</p>
+<p>「睡不着。」</p>
+<p>「在想谁？」</p>
+<p>「我睡了。」</p>
+<p>「晚安。」</p>
+<p>（嘟……）</p>
+<p>我永远赢不了这个女人，我早该知道。</p>
+<p>冷，想象一下在一个落叶季节住在窗户玻璃破碎不堪的出租房中的那种寒冷，除了自己的体温一切都变得不重要，我只盼着自己能快点睡着，这样就不用再去想这些有的没的。寒风、路灯、不死的蚊，人在这种情况下会变得什么都不想计较，只要你肯让我睡觉，哪怕你把我的命拿去，而没人肯把我的命拿去，我只能拿衣服蒙住头，就让我闷死吧，而蚊虫不肯我就这样死去，顺着衣服的缝隙钻进来陪我闲聊。我已经要疯了，拿起烟走进厕所，小强从下水道口钻出来，匆匆忙忙逃进便池，我按下冲水阀门，是坏的。</p>
+<p>我陷入了困境，望着马桶中的大便。有一种奇迹叫做水，有一种魔法叫做水龙头，现在奇迹和魔法就在我的不远处，我却没有能量将它们挪移到马桶，而马桶的机关也是坏的。小强已经压死在半斤大便之下，我却没有能力解救它。我将烟头摁进大便中，如果房东希望我将他的地方搞成一团糟就不要修水龙头，我这么想着，向大便上吐了一口痰。</p>
+<p>房间依旧是蚊虫的天下，时间已经将近十一点，如果现在出门也许还有二十四小时的便利店，我姑且坚信这点，也只能这么坚信，因为我迫切的想要睡觉，所以我迫切的需要一盘蚊香。</p>
+
+                </div>
+            </div>
+    
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2008/06/21/novel-wind-4/">
+        上一篇<br>那是一阵疯（四）
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2008/06/18/novel-wind-2/">
+        下一篇<br>那是一阵疯（二）
+    </a>
+    
+</nav>
+
+    
+            
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="http://synn.me">Synn · 半斤紕漏 八兩才情</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js" integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js" integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?84245914"></script>
+
+
+
+</body>
+</html>
