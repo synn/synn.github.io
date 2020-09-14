@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Synn · 半斤紕漏 八兩才情</title>
+  <title>Synn · 别太放肆 没什么用</title>
   
   
   <link href="/atom.xml" rel="self"/>
@@ -92,9 +92,9 @@
     
       <category term="C4D" scheme="http://synn.me/tags/C4D/"/>
     
-      <category term="建模" scheme="http://synn.me/tags/%E5%BB%BA%E6%A8%A1/"/>
-    
       <category term="头骨" scheme="http://synn.me/tags/%E5%A4%B4%E9%AA%A8/"/>
+    
+      <category term="建模" scheme="http://synn.me/tags/%E5%BB%BA%E6%A8%A1/"/>
     
   </entry>
   
@@ -146,9 +146,9 @@
     
       <category term="C4D" scheme="http://synn.me/tags/C4D/"/>
     
-      <category term="香水" scheme="http://synn.me/tags/%E9%A6%99%E6%B0%B4/"/>
-    
       <category term="建模" scheme="http://synn.me/tags/%E5%BB%BA%E6%A8%A1/"/>
+    
+      <category term="香水" scheme="http://synn.me/tags/%E9%A6%99%E6%B0%B4/"/>
     
   </entry>
   
