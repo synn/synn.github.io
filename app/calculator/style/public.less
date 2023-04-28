@@ -9,10 +9,12 @@
 body {
 	.container-full;
 	margin: 0;
+	background: @brand-color;
 	main {
 		background: #eee;
 		.container;
 		#content {
+			min-height: 100vh;
 			header {
 				margin: 0;
 				padding: 60px 0 0 0;
@@ -153,6 +155,9 @@ body {
 				display: none;
 			}
 			footer {
+				width: 100%;
+				position: absolute;
+				bottom: 0;
 				clear: both;
 				padding: 10px 0;
 				color: gray;
