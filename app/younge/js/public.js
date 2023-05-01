@@ -6,24 +6,6 @@ createApp({
 		return {
 			wedding_list: [
 				{
-					"date": "2023-05-01 07:00:00",
-					"male": "都市港湾",
-					"female": "市区酒店",
-					"hall": "东方大厦",
-					"contact": "18131859592 张杰",
-					"tail": 2000,
-					"more": "奔驰S*1、奔驰E*5"
-				},
-				{
-					"date": "2023-05-01 09:00:00",
-					"male": "河北路花卉小区",
-					"female": "万峰大酒店",
-					"hall": "福泉楼",
-					"contact": "13785989870 曹现华",
-					"tail": 3000,
-					"more": "奔驰S600*1、奥迪A6*7、头车扎花、跟车彩带"
-				},
-				{
 					"date": "2023-05-07 09:30:00",
 					"male": "麒麟湾",
 					"female": "临城县城",
@@ -73,50 +55,3 @@ createApp({
 		}
 	}
 }).mount('#wedding')
-
-
-
-
-
-
-
-// for (let i in car_info) {
-//     console.log(car_info[i])
-// }
-
-// $(function () {
-// 	// for (let i in car_info) {
-// 	// 	$('#wedding-list li span').text(car_info[i]['date'])
-// 	// }
-
-// 	// 导航切换
-// 	$('#nav-cha, #nav-tar, #nav-ave').click(function () {
-// 		$('#nav-cha, #nav-tar, #nav-ave').removeClass('check');
-// 		$('.cha, .tar, .ave').hide();
-// 		$(this).addClass('check');
-// 		$('.'+$(this).attr('id').substr(4)).show();
-// 	});
-// 	$('#nav-cha').click(function () {
-// 		$('#cha-data-grp-ogn, #cha-data-grp-crt').val('');
-// 		$('#result-tips-word').text('涨幅');
-// 		$('#result-dis-sign').text('+');
-// 		$('#result-dis-number').text('0%');
-// 	});
-// 	$('#nav-tar').click(function () {
-// 		$('#tar-data-grp-ogn, #tar-data-grp-mar').val('');
-// 		$('#result-tips-word').text('目标价格');
-// 		$('#result-dis-sign').text('￥');
-// 		$('#result-dis-number').text('0.00');
-// 	});
-// 	$('#nav-ave').click(function () {
-// 		$('#ave-data-grp-ognprice, #ave-data-grp-ogncount, #ave-data-grp-nowprice, #ave-data-grp-dealcount').val('');
-// 		$('#result-tips-word').text('平均成本');
-// 		$('#result-dis-sign').text('￥');
-// 		$('#result-dis-number').text('0.00');
-// 	});
-
-// 	// 标签清空
-// 	$('.target').click(function () {
-// 		$('#'+$(this).attr('for')).val('');
-// 	});
-// });
