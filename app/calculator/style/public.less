@@ -1,0 +1,187 @@
+@brand-color: #09f;
+
+* {
+	font-family: tahoma, arial, 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+body {
+	.container-full;
+	margin: 0;
+	background: @brand-color;
+	main {
+		background: #eee;
+		.container;
+		#content {
+			min-height: 100vh;
+			header {
+				margin: 0;
+				padding: 30px 0 0 0;
+				width: 100%;
+				background: @brand-color;
+				nav {
+					margin: auto;
+					height: 40px;
+					width: 360px;
+					color: white;
+					border: solid white 1px;
+					border-radius: 10px;
+					background: @brand-color;
+					overflow: hidden;
+					.menu {
+						width: 16.66%;
+						float: left;
+						line-height: 40px;
+						text-align: center;
+						cursor: pointer;
+					}
+					.check {
+						color: @brand-color;
+						background: white;
+					}
+				}
+				#result {
+					padding: 30px;
+					&-tips {
+						text-align: right;
+						line-height: 20px;
+						color: white;
+					}
+					&-dis {
+						height: 60px;
+						&-sign {
+							font-size: 36px;
+						}
+						&-number {
+							font-size: 60px;
+						}
+						.result-num {
+							float: right;
+							color: white;
+							text-align: right;
+							line-height: 60px;
+						}
+					}
+				}
+			}
+			.cha, .tar, .ave, .kzz, .rate, .annual {
+				display: block;
+				padding: 30px 0 60px 0;
+				background: #eee;
+				&-data {
+					border-width: 1px 1px 0 1px;
+					&-grp {
+						height: 60px;
+						margin: 5px 0;
+						border-width: 1px 0 1px 0;
+						border-color: #e0e0e0;
+						border-style: solid;
+						background: white;
+						label.target {
+							display: block;
+							float: left;
+							width: 100px;
+							height: 60px;
+							color: gray;
+							text-align: center;
+							line-height: 60px;
+						}
+						input.data-in {
+							display: block;
+							height: 58px;
+							border: 0;
+							width: calc(~'100% - 160px');
+							text-align: right;
+							font-size: 20px;
+							float: left;
+							margin: 0;
+							padding: 0;
+						}
+						label.yuan {
+							display: block;
+							height: 60px;
+							width: 60px;
+							float: right;
+							color: gray;
+							text-align: center;
+							line-height: 60px;
+
+						}
+					}
+				}
+				&-btn {
+					padding-top: 10px;
+					height: 60px;
+					margin-top: 30px;
+					&-grp {
+						display: block;
+						width: 300px;
+						margin: auto;
+						button {
+							margin: 0;
+							padding: 0;
+							height: 40px;
+							width: 45%;
+							border: 0;
+							border-radius: 20px;
+							color: white;
+							cursor: pointer;
+						}
+						#cha-btn-grp-comp, #tar-btn-grp-comp, #ave-btn-grp-comp, #kzz-btn-grp-comp, #rate-btn-grp-comp, #annual-btn-grp-comp {
+							float: left;
+							background: @brand-color;
+						}
+						#cha-btn-grp-reset, #tar-btn-grp-reset, #ave-btn-grp-reset, #kzz-btn-grp-reset, #rate-btn-grp-reset, #annual-btn-grp-reset {
+							float: right;
+							background: #aaa
+						}
+					}
+				}
+			}
+			.cha {
+				// display: none;
+			}
+			.tar {
+				display: none;
+			}
+			.ave {
+				display: none;
+			}
+			.kzz {
+				display: none;
+			}
+			.rate {
+				display: none;
+			}
+			.annual {
+				display: none;
+			}
+			footer {
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				clear: both;
+				padding: 15px 0;
+				color: gray;
+				font-size: 12px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 768px;
+	@media (max-width: 768px) {
+		max-width: 100%;
+	}
+}
+
+.container-full {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}

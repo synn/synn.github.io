@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<title>斗金计算器</title>
+	<meta charset="UTF-8" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="shortcut icon" href="./img/fav.ico">
+	<meta name="apple-mobile-web-app-title" content="斗金" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<link rel="apple-touch-icon" sizes="57x57" href="./img/touch-icon-114.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="./img/touch-icon-144.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="./img/touch-icon-114.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="./img/touch-icon-144.png" />
+	<link rel="stylesheet/less" type="text/css" href="./style/public.less" />
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+	<main>
+		<div id="content">
+			<header>
+				<nav>
+					<div id="nav-cha" class="menu check">涨跌幅</div>
+					<div id="nav-tar" class="menu">目标价</div>
+					<div id="nav-ave" class="menu">均价</div>
+					<div id="nav-kzz" class="menu">可转债</div>
+					<div id="nav-rate" class="menu">利率</div>
+					<div id="nav-annual" class="menu">年化</div>
+				</nav>
+				<div id="result">
+					<div id="result-tips">
+						<span id="result-tips-word">涨幅</span>
+					</div>
+					<div id="result-dis">
+						<span id="result-dis-number" class="result-num">0%</span>
+						<span id="result-dis-sign" class="result-num">+</span>
+					</div>	
+				</div>
+			</header>
+			<div class="cha">
+				<div class="cha-data">
+					<div class="cha-data-grp">
+						<label class="target" for="cha-data-grp-ogn">原价</label>
+						<input class="data-in" id="cha-data-grp-ogn" type="number" autofocus />
+						<label class="yuan" for="cha-data-grp-ogn">元</label>
+					</div>
+					<div class="cha-data-grp">
+						<label class="target" for="cha-data-grp-crt">现价</label>
+						<input class="data-in" id="cha-data-grp-crt" type="number" />
+						<label class="yuan" for="cha-data-grp-crt">元</label>
+					</div>
+				</div>
+				<div id="cha-btn" class="cha-btn">
+					<div id="cha-btn-grp" class="cha-btn-grp">
+						<button class="sub-btn" id="cha-btn-grp-comp">计算</button>
+						<button class="res-btn" id="cha-btn-grp-reset">清空</button>
+					</div>
+				</div>
+			</div>
+			<div class="tar">
+				<div class="tar-data">
+					<div class="tar-data-grp">
+						<label class="target" for="tar-data-grp-ogn">初始价格</label>
+						<input class="data-in" id="tar-data-grp-ogn" type="number" />
+						<label class="yuan" for="tar-data-grp-ogn">元</label>
+					</div>
+					<div class="tar-data-grp">
+						<label class="target" for="tar-data-grp-mar">涨跌幅</label>
+						<input class="data-in" id="tar-data-grp-mar" type="number" placeholder="涨幅为正，跌幅为负" />
+						<label class="yuan" for="tar-data-grp-crt">%</label>
+					</div>
+				</div>
+				<div id="tar-btn" class="tar-btn">
+					<div id="tar-btn-grp" class="tar-btn-grp">
+						<button class="sub-btn" id="tar-btn-grp-comp">计算</button>
+						<button class="res-btn" id="tar-btn-grp-reset">清空</button>
+					</div>
+				</div>
+			</div>
+			<div class="ave">
+				<div class="ave-data">
+					<div class="ave-data-grp">
+						<label class="target" for="ave-data-grp-ognprice">原始股价</label>
+						<input class="data-in" id="ave-data-grp-ognprice" type="number" />
+						<label class="yuan" for="ave-data-grp-ognprice">元</label>
+					</div>
+					<div class="ave-data-grp">
+						<label class="target" for="ave-data-grp-ogncount">原始数量</label>
+						<input class="data-in" id="ave-data-grp-ogncount" type="number" />
+						<label class="yuan" for="ave-data-grp-ogncount">股</label>
+					</div>
+					<div class="ave-data-grp">
+						<label class="target" for="ave-data-grp-nowprice">当前股价</label>
+						<input class="data-in" id="ave-data-grp-nowprice" type="number" />
+						<label class="yuan" for="ave-data-grp-nowprice">元</label>
+					</div>
+					<div class="ave-data-grp">
+						<label class="target" for="ave-data-grp-dealcount">交易数量</label>
+						<input class="data-in" id="ave-data-grp-dealcount" type="number" placeholder="买入为正，卖出为负" />
+						<label class="yuan" for="ave-data-grp-dealcount">股</label>
+					</div>
+				</div>
+				<div id="ave-btn" class="ave-btn">
+					<div id="ave-btn-grp" class="ave-btn-grp">
+						<button class="sub-btn" id="ave-btn-grp-comp">计算</button>
+						<button class="res-btn" id="ave-btn-grp-reset">清空</button>
+					</div>
+				</div>
+			</div>
+			<div class="kzz">
+				<div class="kzz-data">
+					<div class="kzz-data-grp">
+						<label class="target" for="kzz-data-grp-trans">转股价</label>
+						<input class="data-in" id="kzz-data-grp-trans" type="number" />
+						<label class="yuan" for="kzz-data-grp-trans">元</label>
+					</div>
+					<div class="kzz-data-grp">
+						<label class="target" for="kzz-data-grp-price">正股价</label>
+						<input class="data-in" id="kzz-data-grp-price" type="number"/>
+						<label class="yuan" for="kzz-data-grp-price">元</label>
+					</div>
+					<div class="kzz-data-grp">
+						<label class="target" for="kzz-data-grp-spill">溢价率</label>
+						<input class="data-in" id="kzz-data-grp-spill" type="number" placeholder="20" />
+						<label class="yuan" for="kzz-data-grp-spill">%</label>
+					</div>
+				</div>
+				<div id="kzz-btn" class="kzz-btn">
+					<div class="kzz-btn-grp">
+						<button class="sub-btn" id="kzz-btn-grp-comp">计算</button>
+						<button class="res-btn" id="kzz-btn-grp-reset">清空</button>
+					</div>
+				</div>
+			</div>
+			<div class="rate">
+				<div class="rate-data">
+					<div class="rate-data-grp">
+						<label class="target" for="rate-data-grp-capital">入金</label>
+						<input class="data-in" id="rate-data-grp-capital" type="number" />
+						<label class="yuan" for="rate-data-grp-capital">元</label>
+					</div>
+					<div class="rate-data-grp">
+						<label class="target" for="rate-data-grp-interest">利息</label>
+						<input class="data-in" id="rate-data-grp-interest" type="number"/>
+						<label class="yuan" for="rate-data-grp-interest">元</label>
+					</div>
+					<div class="rate-data-grp">
+						<label class="target" for="rate-data-grp-period">期数</label>
+						<input class="data-in" id="rate-data-grp-period" type="number" placeholder="24" />
+						<label class="yuan" for="rate-data-grp-period">期</label>
+					</div>
+				</div>
+				<div id="rate-btn" class="rate-btn">
+					<div class="rate-btn-grp">
+						<button class="sub-btn" id="rate-btn-grp-comp">计算</button>
+						<button class="res-btn" id="rate-btn-grp-reset">清空</button>
+					</div>
+				</div>
+			</div>
+			<div class="annual">
+				<div class="annual-data">
+					<div class="annual-data-grp">
+						<label class="target" for="annual-data-grp-cost">本金</label>
+						<input class="data-in" id="annual-data-grp-cost" type="number" />
+						<label class="yuan" for="annual-data-grp-cost">元</label>
+					</div>
+					<div class="annual-data-grp">
+						<label class="target" for="annual-data-grp-interest">期内收益</label>
+						<input class="data-in" id="annual-data-grp-interest" type="number" />
+						<label class="yuan" for="annual-data-grp-interest">元</label>
+					</div>
+					<div class="annual-data-grp">
+						<label class="target" for="annual-data-grp-period">总期数</label>
+						<input class="data-in" id="annual-data-grp-period" type="number" placeholder="36" />
+						<label class="yuan" for="annual-data-grp-period">期</label>
+					</div>
+					<div class="annual-data-grp">
+						<label class="target" for="annual-data-grp-return">期末回款</label>
+						<input class="data-in" id="annual-data-grp-return" type="number" placeholder="0" />
+						<label class="yuan" for="annual-data-grp-return">元</label>
+					</div>
+				</div>
+				<div id="annual-btn" class="annual-btn">
+					<div class="annual-btn-grp">
+						<button class="sub-btn" id="annual-btn-grp-comp">计算</button>
+						<button class="res-btn" id="annual-btn-grp-reset">清空</button>
+					</div>
+				</div>
+			</div>
+			<footer>
+				&copy; 2017 Synn
+			</footer>
+		</div>
+	</main>
+	<script src="https://cdn.bootcss.com/less.js/2.7.2/less.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="./js/public.js"></script>
+</body>
+</html>
