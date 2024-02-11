@@ -4,6 +4,13 @@ import { createApp } from 'https://cdn.bootcdn.net/ajax/libs/vue/3.2.47/vue.esm-
 createApp({
 	data() {
 		return {
+			nav: true,
+			value: '',
+			deposit: '',
+			rent: '',
+			gps: '',
+			insurance: '',
+			service: '',
 			wedding_list: [
 				{
 					"date": "6/25/2023  07:00:00",
@@ -32,8 +39,7 @@ createApp({
 					"tail": 1000,
 					"more": "路虎揽胜加长*1"
 				}
-			],
-			business_list: 'business_list'
+			]
 		}
 	}
-}).mount('#wedding')
+}).mount('#content')
