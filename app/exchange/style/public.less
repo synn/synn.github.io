@@ -1,0 +1,154 @@
+@brand-color: rgb(67, 199, 159);
+
+* {
+	font-family: tahoma, arial, 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.bottom {
+	clear: both;
+}
+
+body {
+	background: #eee;
+	.container-full;
+	margin: 0;
+	main {
+		.container;
+		#content {
+			header {
+				margin: 0;
+				padding: 30px 0 30px;
+				width: 100%;
+				nav {
+					margin: auto;
+					height: 40px;
+					width: 320px;
+					color: white;
+					border: solid white 1px;
+					border-radius: 20px;
+					background: @brand-color;
+					overflow: hidden;
+					p {
+						width: 100%;
+						text-align: center;
+					}
+					.menu {
+						width: 50%;
+						float: left;
+						line-height: 40px;
+						text-align: center;
+						cursor: pointer;
+					}
+					.check {
+						color: @brand-color;
+						background: white;
+					}
+				}
+			}
+			.wedding {
+				&-list {
+					margin: 0;
+					padding: 10px 0;
+					&-items {
+						box-shadow: 0 1px 3px #ccc;
+						margin-bottom: 10px;
+						padding: 15px 30px;
+						width: 100%;
+						color: black;
+						background-color: white;
+						&-date, &-contact, &-male, &-female, &-hall, &-tail, &-info {
+							margin: 5px 0;
+							.wedding-tips, .wedding-info {
+								float: left;
+								line-height: 24px;
+							}
+							.wedding-tips {
+								color: #aaa;
+								font-weight: bolder;
+							}
+						}
+					}
+				}
+			}
+			.buies {
+				&-grp {
+					height: 60px;
+					margin: 5px 0;
+					border-width: 1px 0 1px 0;
+					border-color: #e0e0e0;
+					border-style: solid;
+					background: white;
+					label.target {
+						display: block;
+						float: left;
+						width: 100px;
+						height: 60px;
+						color: gray;
+						text-align: center;
+						line-height: 60px;
+					}
+					input.data-in {
+						display: block;
+						height: 58px;
+						border: 0;
+						width: calc(~'100% - 160px');
+						text-align: right;
+						font-size: 20px;
+						float: left;
+						margin: 0;
+						padding: 0;
+					}
+					label.yuan {
+						display: block;
+						height: 60px;
+						width: 60px;
+						float: right;
+						color: gray;
+						text-align: center;
+						line-height: 60px;
+					}
+					#buies-grp-total {
+						font-weight: 1000;
+						background-color: #eee;
+					}
+				}
+				#buies-total {
+					font-weight: 1000;
+					border: none;
+					background: #eee;
+				}
+			}
+			footer {
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+				clear: both;
+				padding: 15px 15px;
+				color: gray;
+				font-size: 12px;
+				text-align: right;
+			}
+		}
+	}
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 768px;
+	@media (max-width: 768px) {
+		max-width: 100%;
+	}
+}
+
+.container-full {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}

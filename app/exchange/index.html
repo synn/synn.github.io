@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<title>€urrency £xchange</title>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="shortcut icon" href="./img/fav.ico">
+	<meta name="apple-mobile-web-app-title" content="永歌" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<link rel="apple-touch-icon" sizes="57x57" href="./img/touch-icon-114.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="./img/touch-icon-144.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="./img/touch-icon-114.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="./img/touch-icon-144.png" />
+	<link rel="stylesheet/less" type="text/css" href="./style/public.less" />
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+	<main>
+		<div id="content">
+			<header @click="nav = !nav">
+				<nav>
+					<!-- <p>婚礼用车<i class="fa fa-exchange"></i>以租代购</p> -->
+					<div id="nav-wedding" class="menu" :class="{check: nav}">婚礼用车</div>
+					<div id="nav-buycar" class="menu" :class="{check: !nav}">以租代购</div>
+				</nav>
+			</header>
+			<div id="wedding" class="wedding" v-show="nav">
+				<ul id="wedding-list" class="wedding-list">
+					<li class="wedding-list-items" v-for="item in wedding_list">
+						<div class="wedding-list-items-date">
+							<div class="wedding-tips">婚期：</div>
+							<div class="wedding-info">{{ item.date }}</div>
+						</div>
+						<div class="bottom"></div>
+						<div class="wedding-list-items-contact">
+							<div class="wedding-tips">联系：</div>
+							<div class="wedding-info">{{ item.contact }}</div>
+						</div>
+						<div class="bottom"></div>
+						<div class="wedding-list-items-male">
+							<div class="wedding-tips">男方：</div>
+							<div class="wedding-info">{{ item.male }}</div>
+						</div>
+						<div class="bottom"></div>
+						<div class="wedding-list-items-female">
+							<div class="wedding-tips">女方：</div>
+							<div class="wedding-info">{{ item.female }}</div>
+						</div>
+						<div class="bottom"></div>
+						<div class="wedding-list-items-hall">
+							<div class="wedding-tips">酒店：</div>
+							<div class="wedding-info">{{ item.hall }}</div>
+						</div>
+						<div class="bottom"></div>
+						<div class="wedding-list-items-tail">
+							<div class="wedding-tips">尾款：</div>
+							<div class="wedding-info">￥{{ item.tail }}.00</div>
+						</div>
+						<div class="bottom"></div>
+						<div class="wedding-list-items-info">
+							<div class="wedding-tips">补充：</div>
+							<div class="wedding-info">{{ item.more }}</div>
+						</div>
+						<div class="bottom"></div>
+					</li>
+				</ul>
+			</div>
+			<div id="buies" class="buies" v-show="!nav">
+				<div class="buies-grp">
+					<label class="target" for="buies-grp-value" @click="value=null">车辆价值</label>
+					<input class="data-in" id="buies-grp-value" type="number" v-model="value" />
+					<label class="yuan" for="buies-grp-value">元</label>
+				</div>
+				<div class="buies-grp">
+					<label class="target" for="buies-grp-deposit" @click="deposit=parseInt(value*0.05)">租车押金</label>
+					<input class="data-in" id="buies-grp-deposit" type="number" v-model="deposit" />
+					<label class="yuan" for="buies-grp-deposit">元</label>
+				</div>
+				<div class="buies-grp">
+					<label class="target" for="buies-grp-rent" @click="rent=parseInt(value*1.45/36)">月租金</label>
+					<input class="data-in" id="buies-grp-rent" type="number" v-model="rent" />
+					<label class="yuan" for="buies-grp-rent">元</label>
+				</div>
+				<div class="buies-grp">
+					<label class="target" for="buies-grp-gps">GPS费用</label>
+					<input class="data-in" id="buies-grp-gps" type="number" v-model="gps" />
+					<label class="yuan" for="buies-grp-gps">元</label>
+				</div>
+				<div class="buies-grp">
+					<label class="target" for="buies-grp-insurance" @click="insurance=null">保险费用</label>
+					<input class="data-in" id="buies-grp-insurance" type="number" v-model="insurance" placeholder="（根据实际费用收取）" />
+					<label class="yuan" for="buies-grp-insurance">元</label>
+				</div>
+				<div class="buies-grp">
+					<label class="target" for="buies-grp-service" @click="service=null">服务费用</label>
+					<input class="data-in" id="buies-grp-service" type="number" v-model="service" placeholder="（服务费2%免除）" />
+					<label class="yuan" for="buies-grp-service">元</label>
+				</div>
+				<div class="buies-grp" id="buies-total">
+					<label class="target" for="buies-grp-total">费用合计</label>
+					<input class="data-in" id="buies-grp-total" type="number" readonly="readonly" :value="deposit + rent + gps + insurance + service" />
+					<label class="yuan" for="buies-grp-total">元</label>
+				</div>
+			</div>
+			<footer>
+				&copy; 2023 Synn
+			</footer>
+		</div>
+	</main>
+	<script src="https://cdn.bootcss.com/less.js/2.7.2/less.min.js"></script>
+	<script type="module" src="./js/public.js"></script>
+</body>
+</html>
