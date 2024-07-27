@@ -5,39 +5,39 @@ createApp({
 	data() {
 		return {
 			nav: true,
-			value: '',
-			deposit: '',
-			rent: '',
-			gps: '',
-			insurance: '',
-			service: '',
+			value: null,
+			deposit: null,
+			rent: null,
+			gps: 2000,
+			insurance: null,
+			service: null,
 			wedding_list: [
 				{
-					"date": "6/25/2023  07:00:00",
-					"male": "自然城1期",
-					"female": "县政府北门金厦北区",
-					"hall": "景仙商务酒店",
-					"contact": "15230165735 吉星阁",
-					"tail": 3700,
-					"more": "奥迪A8*1、奥迪A6*7、炮车*1、55座大巴*1（大巴需将客人送回任县）"
+					"date": "231209 / 06:30",
+					"male": "滨江美地",
+					"female": "和谐雅居",
+					"hall": "鑫秋饭店",
+					"contact": "邵文星",
+					"tail": 2000,
+					"more": "奔驰S、奥迪A6L*3、老款奥迪A6*2（其中一辆白色，可以是其他车型）"
 				},
 				{
-					"date": "7/25/2023  07:00:00",
-					"male": "全都城乐府",
-					"female": "交通花苑",
-					"hall": "马凯贵宾楼开元路店",
-					"contact": "18631961616 王宇涵",
-					"tail": 800,
-					"more": "奔驰S"
+					"date": "231230 / 07:00",
+					"male": "麒麟湾",
+					"female": "邢洲大酒店",
+					"hall": "碧海美食园",
+					"contact": "13930908720 赵彦岭",
+					"tail": 2300,
+					"more": "真迈巴赫、奔驰E*5"
 				},
 				{
-					"date": "9/8/2023  07:00:00",
-					"male": "化工局家属院",
-					"female": "邢台八中",
-					"hall": "天赐良缘大酒店",
-					"contact": "13313199059 李浩",
-					"tail": 1000,
-					"more": "路虎揽胜加长*1"
+					"date": "240123 / 06:00",
+					"male": "皓顺华悦城",
+					"female": "沙河冀庄",
+					"hall": "湘江酒店",
+					"contact": "15530989091 冯一博",
+					"tail": 1050,
+					"more": "真迈巴赫、奔驰E*5"
 				}
 			]
 		}

@@ -1,4 +1,4 @@
-@brand-color: rgb(67, 199, 159);
+@brand-color: #4111FF;
 
 * {
 	font-family: tahoma, arial, 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
@@ -15,7 +15,7 @@ ul {
 }
 
 body {
-	background: #eee;
+	background: #4111FF;
 	.container-full;
 	margin: 0;
 	main {
@@ -23,7 +23,7 @@ body {
 		#content {
 			header {
 				margin: 0;
-				padding: 30px 0 10px;
+				padding: 30px 0 30px;
 				width: 100%;
 				nav {
 					margin: auto;
@@ -34,6 +34,10 @@ body {
 					border-radius: 20px;
 					background: @brand-color;
 					overflow: hidden;
+					p {
+						width: 100%;
+						text-align: center;
+					}
 					.menu {
 						width: 50%;
 						float: left;
@@ -52,11 +56,10 @@ body {
 					margin: 0;
 					padding: 10px 0;
 					&-items {
-						box-shadow: 0 1px 3px #ccc;
 						margin-bottom: 10px;
 						padding: 15px 30px;
 						width: 100%;
-						color: black;
+						color: #142058;
 						background-color: white;
 						&-date, &-contact, &-male, &-female, &-hall, &-tail, &-info {
 							margin: 5px 0;
@@ -125,10 +128,10 @@ body {
 				position: fixed;
 				bottom: 0;
 				clear: both;
-				padding: 15px 0;
+				padding: 15px 15px;
 				color: gray;
 				font-size: 12px;
-				text-align: center;
+				text-align: right;
 			}
 		}
 	}
